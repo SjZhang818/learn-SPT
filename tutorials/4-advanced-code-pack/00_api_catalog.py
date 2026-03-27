@@ -84,7 +84,7 @@ def collect_symbols(module_name: str) -> list[SymbolItem]:
 
         # 读取 doc 首行作为用途摘要。
         doc = inspect.getdoc(obj) or ""
-        first_line = doc.splitlines()[0].strip() if doc else "（暂无文档说明）"
+        first_line = doc.splitlines()[0].strip() if doc else "(暂无文档说明)"
         items.append(
             SymbolItem(
                 name=name,

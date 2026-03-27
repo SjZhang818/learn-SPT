@@ -24,7 +24,10 @@ def main() -> None:
     for script in SCRIPTS:
         script_path = base / script
         print(f"\n===== Running {script} =====")
-        subprocess.run([sys.executable, str(script_path)], check=True)
+        try:
+            subprocess.run([sys.executable, str(script_path)], check=True)
+        except subprocess.CalledProcessError as exc:
+            raise RuntimeError(f"脚本执行失败：{script}") from exc
 
     print("\nAll categorized scripts ran successfully.")
 
