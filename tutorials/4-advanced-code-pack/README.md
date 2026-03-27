@@ -21,7 +21,7 @@
 在仓库根目录下执行：
 
 ```bash
-cd /home/runner/work/learn-SPT/learn-SPT
+cd <repository-root>
 python tutorials/4-advanced-code-pack/00_scatterers_optics.py
 python tutorials/4-advanced-code-pack/01_noises.py
 python tutorials/4-advanced-code-pack/02_math.py
@@ -39,7 +39,7 @@ python tutorials/4-advanced-code-pack/run_all.py
 ## 依赖
 
 ```bash
-cd /home/runner/work/learn-SPT/learn-SPT
+cd <repository-root>
 python -m pip install -r requirements.txt
 python -m pip install -e .
 ```
